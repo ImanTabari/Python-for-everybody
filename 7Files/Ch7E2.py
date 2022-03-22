@@ -7,12 +7,16 @@ the line to extract the floating-point number on the line. Count these lines and
 then compute the total of the spam confidence values from these lines. When you
 reach the end of the file, print out the average spam confidence.
 '''
-fname = input('Please enter your file name: ')
-try:
-    fhand = open(fname)
-except:
-    print('Your file name %s does not exist. please try again.' %fname)
-    exit()
+while (True):
+    fname = input('Please enter your file name: ')
+    if fname == 'done': exit()
+    else:
+        try:
+            fhand = open(fname)
+            break
+        except:
+            print('Your file name %s does not exist. please try again. Or insert done to exit' %fname)
+
 total_spam_line = 0
 total_spam_value = 0
 for line in fhand:

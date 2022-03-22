@@ -12,12 +12,15 @@ SAT, 05 JAN 2008 09:14:16 -0500
 '''
 #import os
 #print(os.getcwd())
-fname = input('Please enter the file name: ')
-try:
-    fhand = open(fname)
-except:
-    print('your file name %s dose not exist, please try agin.' %fname)
-    exit()
+while(True):
+    fname = input('Please enter the file name: ')
+    if fname == 'done': exit()
+    else:
+        try:
+            fhand = open(fname)
+            break
+        except:
+            print('your file name %s dose not exist, please try agin. Or insert done to exit.' %fname)
 for line in fhand:
    print(line.rstrip().upper())
 
