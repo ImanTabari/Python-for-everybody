@@ -9,7 +9,7 @@ entry = 'X-DSPAM-Confidence: 0.8475'
 space_pos = entry.find(' ')
 print (float(entry[space_pos+1:]))
 
-portion = float(entry[entry.find(' ')+1:])
+portion = float(entry[space_pos+1:]) 
 print (portion)
 
-print(float(entry[entry.find(' ')+1:]))
+print(float(entry[space_pos+1:]))

@@ -4,8 +4,6 @@ After all the data has been read and the dictionary has been created, look throu
 the dictionary using a maximum loop (see Section 5.7.2) to find who has the most
 messages and print how many messages the person has.
 '''
-from re import T
-
 
 while True:
     fname = input('Please enter your file name: ')
